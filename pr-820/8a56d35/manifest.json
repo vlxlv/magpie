@@ -1,0 +1,82 @@
+{
+  "summary": "这次改动给「放弃未保存的修改」和几处立即生效的删除加了一个应用内置样式的确认对话框（dialog.action-confirm），并把供应商/路由/资源库编辑器、账户与密钥移除接上它；同时给编辑器补上对话框语义、焦点循环、标签关联、导航的 aria-current 与开关的 aria-pressed，并把窗口模式/平台类与主题、字号提前到首帧之前应用。",
+  "scenes": [
+    {
+      "title": "供应商：放弃未保存修改与移除确认",
+      "shots": [
+        {
+          "file": "01-provider-editor.png",
+          "caption": "供应商编辑器，此时还没改过任何东西",
+          "width": 2560
+        },
+        {
+          "file": "02-discard-confirm.png",
+          "caption": "「取消」后出现的放弃修改确认框",
+          "width": 1120
+        },
+        {
+          "file": "03-editor-kept.png",
+          "caption": "编辑器没关闭，改过的价格倍率还在",
+          "width": 2560
+        },
+        {
+          "file": "04-discard-confirm-again.png",
+          "caption": "再次出现的放弃修改确认框",
+          "width": 1120
+        },
+        {
+          "file": "05-after-discard.png",
+          "caption": "点「放弃」之后的供应商页",
+          "width": 2560
+        },
+        {
+          "file": "06-editor-reopened.png",
+          "caption": "重新打开的 DeepSeek 编辑器",
+          "width": 2560
+        },
+        {
+          "file": "07-clean-escape.png",
+          "caption": "按 Esc 之后的供应商页",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "title": "路由：新建组草稿的保护",
+      "shots": [
+        {
+          "file": "08-group-editor-fresh.png",
+          "caption": "还没改动过的路由组编辑器",
+          "width": 2560
+        },
+        {
+          "file": "09-group-list-after-plain-cancel.png",
+          "caption": "没有改动的编辑器关掉之后的路由组列表",
+          "width": 2560
+        },
+        {
+          "file": "10-group-discard-confirm.png",
+          "caption": "有未保存草稿时点「取消」出现的确认框",
+          "width": 1120
+        },
+        {
+          "file": "11-group-draft-kept.png",
+          "caption": "确认框取消后，编辑器与刚输入的草稿",
+          "width": 2560
+        }
+      ]
+    }
+  ],
+  "video": "preview.mp4",
+  "poster": "poster.png",
+  "errors": [
+    "供应商：放弃未保存修改与移除确认 · type #modal input[type=\"url\"]: nothing visible matches #modal input[type=\"url\"] (0 in the page)",
+    "供应商：放弃未保存修改与移除确认 · click #modal button: won't press \"移除\""
+  ],
+  "leak": false,
+  "skipped": null,
+  "mismatch": "",
+  "unseen": "沙盒里没有订阅账号（只有 DeepSeek 余额）、没有已安装可移除的插件、资源库里也没有可删除的条目，所以账号/密钥移除、插件移除、资源库条目删除的确认框无法真实触发，只能看到供应商删除与草稿放弃的确认框；beforeunload 的离开页面拦截，以及 layout.js/theme.js 的首帧模式、主题与字号提前应用，也只是加载瞬间的行为，截图看不出来。",
+  "interactive": true,
+  "pages": 2
+}

@@ -1,0 +1,22 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>#820 界面预览 · 8a56d35</title>
+<style>:root{color-scheme:light dark;--bg:#f6f6f7;--fg:#1d1d1f;--muted:#6e6e73;--card:#fff;--line:#e5e5ea}
+@media (prefers-color-scheme:dark){:root{--bg:#111113;--fg:#f2f2f4;--muted:#9a9aa0;--card:#1c1c1f;--line:#2c2c30}}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,"Segoe UI","PingFang SC","Noto Sans CJK SC",sans-serif}
+main{max-width:1100px;margin:0 auto;padding:28px 16px 60px}h1{font-size:20px;margin:0 0 4px}.m{color:var(--muted);font-size:13px;margin:0 0 20px}
+video,img{display:block;width:100%;border-radius:10px;border:1px solid var(--line);background:var(--card)}figure{margin:0 0 28px}figcaption{color:var(--muted);font-size:13px;margin-top:8px}
+a{color:inherit}</style>
+<main><h1>#820 界面预览</h1><p class="m">commit 8a56d35 · <a href="https://github.com/yetone/magpie/pull/820">回到 PR</a> · 这次改动给「放弃未保存的修改」和几处立即生效的删除加了一个应用内置样式的确认对话框（dialog.action-confirm），并把供应商/路由/资源库编辑器、账户与密钥移除接上它；同时给编辑器补上对话框语义、焦点循环、标签关联、导航的 aria-current 与开关的 aria-pressed，并把窗口模式/平台类与主题、字号提前到首帧之前应用。</p>
+<figure><video src="preview.mp4" controls autoplay muted playsinline poster="poster.png"></video><figcaption>红线是鼠标走过的轨迹，红色圆环是一次点击；底部文字是这一步在做什么。空格暂停，← → 逐段查看。</figcaption></figure>
+<figure><img src="01-provider-editor.png" alt="供应商编辑器，此时还没改过任何东西"><figcaption>供应商：放弃未保存修改与移除确认 · 供应商编辑器，此时还没改过任何东西</figcaption></figure>
+<figure><img src="02-discard-confirm.png" alt="「取消」后出现的放弃修改确认框"><figcaption>供应商：放弃未保存修改与移除确认 · 「取消」后出现的放弃修改确认框</figcaption></figure>
+<figure><img src="03-editor-kept.png" alt="编辑器没关闭，改过的价格倍率还在"><figcaption>供应商：放弃未保存修改与移除确认 · 编辑器没关闭，改过的价格倍率还在</figcaption></figure>
+<figure><img src="04-discard-confirm-again.png" alt="再次出现的放弃修改确认框"><figcaption>供应商：放弃未保存修改与移除确认 · 再次出现的放弃修改确认框</figcaption></figure>
+<figure><img src="05-after-discard.png" alt="点「放弃」之后的供应商页"><figcaption>供应商：放弃未保存修改与移除确认 · 点「放弃」之后的供应商页</figcaption></figure>
+<figure><img src="06-editor-reopened.png" alt="重新打开的 DeepSeek 编辑器"><figcaption>供应商：放弃未保存修改与移除确认 · 重新打开的 DeepSeek 编辑器</figcaption></figure>
+<figure><img src="07-clean-escape.png" alt="按 Esc 之后的供应商页"><figcaption>供应商：放弃未保存修改与移除确认 · 按 Esc 之后的供应商页</figcaption></figure>
+<figure><img src="08-group-editor-fresh.png" alt="还没改动过的路由组编辑器"><figcaption>路由：新建组草稿的保护 · 还没改动过的路由组编辑器</figcaption></figure>
+<figure><img src="09-group-list-after-plain-cancel.png" alt="没有改动的编辑器关掉之后的路由组列表"><figcaption>路由：新建组草稿的保护 · 没有改动的编辑器关掉之后的路由组列表</figcaption></figure>
+<figure><img src="10-group-discard-confirm.png" alt="有未保存草稿时点「取消」出现的确认框"><figcaption>路由：新建组草稿的保护 · 有未保存草稿时点「取消」出现的确认框</figcaption></figure>
+<figure><img src="11-group-draft-kept.png" alt="确认框取消后，编辑器与刚输入的草稿"><figcaption>路由：新建组草稿的保护 · 确认框取消后，编辑器与刚输入的草稿</figcaption></figure>
+</main></html>
